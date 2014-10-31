@@ -35,9 +35,6 @@ set background=dark
 colorscheme solarized
 set transparency=20
 
-" Snipmate
-"let g:snippets_dir = expand('~/.vim/bundle/kalins/snippets/')
-
 " Notes
 let g:notes_directories = ['~/Documents/Notes']
 
