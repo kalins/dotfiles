@@ -30,11 +30,6 @@ Plugin 'scrooloose/syntastic'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Styles
-set background=dark
-colorscheme solarized
-set transparency=20
-
 " Notes
 let g:notes_directories = ['~/Documents/Notes']
 
