@@ -27,19 +27,15 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
+Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" Styles
-set background=dark
-colorscheme solarized
-set transparency=20
 
 " Notes
 let g:notes_directories = ['~/Documents/Notes']
 
 " Swapfiles
 set noswapfile
-nmap <leader>vr :tabedit $MYVIMRC<CR>
+nmap <leader>vr :tabedit ~/dotfiles/vim/vimrc.vim<CR>
 map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
