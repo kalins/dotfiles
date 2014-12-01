@@ -8,3 +8,8 @@ nmap J 5j
 nmap K 5k
 map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
+
+function! BuildTags()
+  silent !clear
+  execute "!ctags -R --exclude=.git $GEM_HOME/gems/* ./*"
+endfunction
