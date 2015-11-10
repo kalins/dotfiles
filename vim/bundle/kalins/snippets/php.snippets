@@ -47,3 +47,31 @@ snippet ife
 	} else {
 		${0}
 	}
+snippet doc
+	/**
+	 * ${1:doc}
+	 */
+snippet doch
+	/**
+	 * ${1:class}
+	 *
+	 * @package    ${2:package}
+	 * @subpackage ${3:subpackage}
+	 * @author     ${4:`g:snips_author`}
+	 * @copyright  Copyright (c) `strftime('%Y')`, ${2}
+	 * @license    http://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3.0 (GPLv3)
+	 */
+snippet docf
+	/**
+	 * ${1:class variable}
+	 *
+	 * @param ${2:type} ${3:name} ${4:info}
+	 * @access ${5:private}
+	 */
+snippet docv
+	/**
+	 * ${1:class variable}
+	 *
+	 * @var ${2:string}
+	 * @access ${3:private}
+	 */

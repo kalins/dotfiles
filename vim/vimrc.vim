@@ -30,12 +30,18 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
+Plugin 'jdonaldson/vaxe'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-easytags'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Notes
 let g:notes_directories = ['~/Documents/Notes']
+
+" Easytags
+let g:easytags_async = 1
 
 " Swapfiles
 set noswapfile
