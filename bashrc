@@ -91,7 +91,6 @@ else
     eval `dircolors ~/.dircolors`
 fi
 
-export PATH="$PATH:$HOME/Downloads/MacVim-snapshot-72"
 export PATH="$PATH:$HOME/Scripts"
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
@@ -111,7 +110,6 @@ alias -- -='cd -'
 
 # Applications
 alias f="open . -a finder"
-#alias vim='~/Downloads/MacVim-snapshot-72/mvim'
 
 # Directories
 alias dsk="cd ~/Desktop/"
@@ -131,4 +129,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 source $(brew --prefix nvm)/nvm.sh
