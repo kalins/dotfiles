@@ -13,7 +13,7 @@ set background=dark
 let g:airline_solarized_bg='dark'
 
 if has('gui_running')
-  colorscheme solarized
+  :colorscheme solarized
   set transparency=20
 else
   set t_Co=256

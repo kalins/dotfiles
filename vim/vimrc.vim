@@ -49,7 +49,7 @@ let g:easytags_async = 1
 " Swapfiles
 set noswapfile
 nmap <leader>vr :tabedit ~/dotfiles/vim/vimrc.vim<CR>
-map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <silent> <leader>vrr :call ReloadConfig()<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
