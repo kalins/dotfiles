@@ -88,11 +88,7 @@ if [[ $OSTYPE = darwin* ]]; then
     alias ls='ls -CFG'
 else
     alias ls='ls --color=auto'
-    eval `dircolors ~/.dircolors`
 fi
-
-export PATH="$PATH:$HOME/Scripts"
-export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
@@ -116,18 +112,24 @@ alias dsk="cd ~/Desktop/"
 alias doc="cd ~/Documents/"
 alias dw="cd ~/Downloads/"
 
-export EDITOR=mvim
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
+if [[ $OSTYPE = darwin* ]]; then
+    export EDITOR=mvim
+    export PATH="$PATH:$HOME/Downloads/MacVim-snapshot-72"
+    export PATH="$PATH:$HOME/Scripts"
+    export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+        . `brew --prefix`/etc/bash_completion
+    fi
+    source $(brew --prefix nvm)/nvm.sh
+else
+    export EDITOR=vim
 fi
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-source $(brew --prefix nvm)/nvm.sh
