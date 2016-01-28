@@ -21,3 +21,7 @@ else
   colorscheme solarized
   hi Normal ctermbg=NONE 
 end
+
+"NERDTree
+let g:NERDTreeWinSize=35
+exec "autocmd BufEnter ". g:NERDTreeCreator.BufNamePrefix() ."* :set relativenumber"
