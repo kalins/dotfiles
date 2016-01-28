@@ -86,6 +86,7 @@ if [[ $OSTYPE = darwin* ]]; then
     export CLICOLOR=1
     export LSCOLORS=dxfxcxdxbxegedabagacad
     alias ls='ls -CFG'
+    alias vim='mvim'
 else
     alias ls='ls --color=auto'
     eval `dircolors ~/.dircolors`
