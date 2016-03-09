@@ -8,7 +8,7 @@ filetype off
 "execute pathogen#infect()
 
 " Vundle
-set rtp+=~/.vim/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins

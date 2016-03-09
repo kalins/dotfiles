@@ -1,3 +1,2 @@
 bundle/*
 !bundle/kalins
-!bundle/Vundle.vim
