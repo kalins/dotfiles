@@ -118,6 +118,7 @@ mkcd () { mkdir -p "$@" && cd "$@"; }
 
 if [[ $OSTYPE = darwin* ]]; then
     export EDITOR=mvim
+    export PATH="/usr/local/bin:$PATH"
     export PATH="$PATH:$HOME/Downloads/MacVim-snapshot-72"
     export PATH="$PATH:$HOME/Scripts"
     export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"

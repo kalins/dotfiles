@@ -12,8 +12,10 @@ nmap J 5j
 nmap K 5k
 map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
-map <C-j> o<Esc>
-map <C-k> O<Esc>
+" map <C-j> o<Esc>
+" map <C-k> O<Esc>
+map <C-j> <C-W>j<Esc>
+map <C-k> <C-W>k<Esc>
 map ty "ty
 map tp "tp
 

@@ -31,7 +31,8 @@ Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
+Plugin 'garbas/vim-snipmate'
+" Plugin 'SirVer/ultisnips'
 Plugin 'kalins'
 
 call vundle#end()            " required
@@ -60,8 +61,21 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 "let g:ycm_use_ultisnips_completer = 0
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
+let g:loaded_youcompleteme = 1
 "
 " Trigger configuration.
 "let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+" let g:UltiSnipsJumpForwardTrigger="<c-k>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+
+" Syntastic cinfiguration.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
