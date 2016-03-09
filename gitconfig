@@ -8,7 +8,7 @@
     co = checkout
     llog = "log --graph --decorate --oneline --abbrev-commit --all"
 [core]
-	excludesfile = /Users/kalinstefanov/.gitignore_global
+	excludesfile = ~/.gitignore
 	autocrlf = input
 	filemode = false
 [difftool "sourcetree"]
