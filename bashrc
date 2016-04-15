@@ -127,6 +127,7 @@ if [[ $OSTYPE = darwin* ]]; then
         . `brew --prefix`/etc/bash_completion
     fi
     source $(brew --prefix nvm)/nvm.sh
+    source $(brew --prefix php-version)/php-version.sh && php-version 5
 else
     export EDITOR=vim
 fi
@@ -135,3 +136,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+# NVM
+if [ -s ~/.nvm/nvm.sh ]; then
+	NVM_DIR=~/.nvm
+	source ~/.nvm/nvm.sh
+fi

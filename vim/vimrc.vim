@@ -4,78 +4,108 @@ let mapleader = ","
 
 filetype off
 
-" Pathogen
-"execute pathogen#infect()
-
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins
-Plugin 'kien/ctrlp.vim'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-afterimage'
 Plugin 'tpope/vim-eunuch'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'Raimondi/delimitMate'
-Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
-Plugin 'majutsushi/tagbar'
+
+Plugin 'StanAngeloff/php.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'ervandew/supertab'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
+Plugin 'SirVer/ultisnips'
 Plugin 'xolox/vim-easytags'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'garbas/vim-snipmate'
-" Plugin 'SirVer/ultisnips'
-Plugin 'kalins'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'joonty/vdebug'
+"Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+
+"----------- PLUGINS -----------"
+
+"
 " Notes
+"
+
 let g:notes_directories = ['~/Documents/Notes']
 
-" Easytags
-set tags=./.tags
-"let g:easytags_dynamic_files = 1
-"let g:easytags_file = '~/.vim-gtags'
-"let g:easytags_by_filetype = expand("~/.vim-tags/")
-let g:easytags_by_filetype = getcwd() . '/.tags/'
-let g:easytags_async = 1
 
-" Swapfiles
-set noswapfile
-nmap <leader>vr :tabedit ~/dotfiles/vim/vimrc.vim<CR>
-map <silent> <leader>vrr :call ReloadConfig()<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
-"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
-"let g:ycm_goto_buffer_command = 'new-tab'
-"let g:ycm_use_ultisnips_completer = 0
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-let g:loaded_youcompleteme = 1
 "
-" Trigger configuration.
-"let g:UltiSnipsExpandTrigger="<c-j>"
-" let g:UltiSnipsJumpForwardTrigger="<c-k>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+" php-cs-fixer
+"
 
-" Syntastic cinfiguration.
+let g:php_cs_fixer_level = "psr2"
+nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
+
+"
+" PDV
+"
+
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+
+"
+" PDV
+"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"
+" Easytags
+"
+
+set tags=./.tags
+let g:easytags_by_filetype = getcwd() . '/.tags/'
+"let g:easytags_async = 1
+
+"
+" Syntastic
+"
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers = ['php', 'phpcs']
+"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"let g:syntastic_auto_loc_list = 1
+
+"
+" vim-airline
+"
+
+let g:airline_powerline_fonts = 1
+
+
+"let g:vdebug_options["path_maps"] = {"/var/www": "/Users/kalinstefanov/Sites"}
+
+"vim-mustache-handlebars
+"let g:mustache_abbreviations = 1

@@ -5,7 +5,10 @@ let g:loaded_kalins = 1
 
 function! ReloadConfig()
   execute 'source $MYVIMRC'
-  for f in split(glob('~/.vim/bundle/kalins/**/*.vim'), '\n')
+  for f in split(glob('~/.vim/plugin/*.vim'), '\n')
     exe 'source' f
-endfor
+  endfor
+  for f in split(glob('~/.vim/ftplugin/*.vim'), '\n')
+    exe 'source' f
+  endfor
 endfunction
