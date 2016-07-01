@@ -10,6 +10,7 @@ set laststatus=2
 set noswapfile
 set tabstop=8
 set linespace=4
+set listchars=eol:$,tab:>-
 
 set splitbelow
 set splitright
@@ -45,5 +46,3 @@ let g:NERDTreeHijackNetrw=0
 let g:NERDTreeWinSize=35
 
 " CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\.(git|hg|svn)'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'

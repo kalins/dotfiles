@@ -25,6 +25,14 @@ nmap <D-p> :CtrlP<CR>
 nmap <D-r> :CtrlPBufTag<CR>
 nmap <D-e> :CtrlPMRUFiles<CR>
 
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap () ()
+"inoremap [ []<left>
+"inoremap { {}<Left>
+"inoremap {<CR> {<CR>}<Esc>O<TAB>
+
 function! BuildTags()
   silent !clear
   execute "!ctags -R --exclude=.git $GEM_HOME/gems/* ./*"

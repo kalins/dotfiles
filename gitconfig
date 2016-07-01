@@ -11,6 +11,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	filemode = false
+	editor = vim -f
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
