@@ -40,6 +40,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'honza/vim-snippets'
 "Plugin 'joonty/vdebug'
 
 call vundle#end()            " required
@@ -79,12 +80,13 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
 "
-" PDV
+" UltiSnips
 "
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetsDir= $HOME .'/.vim/bundle/vim-snippets/UltiSnips'
 
 "
 " Easytags
