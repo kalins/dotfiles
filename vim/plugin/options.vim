@@ -8,7 +8,7 @@ set incsearch
 set showcmd
 set laststatus=2
 set noswapfile
-set tabstop=8
+set tabstop=4
 set linespace=4
 set listchars=eol:$,tab:>-
 
@@ -45,4 +45,7 @@ end
 let g:NERDTreeHijackNetrw=0
 let g:NERDTreeWinSize=35
 
-" CtrlP
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=./.vimundo/

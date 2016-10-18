@@ -5,7 +5,7 @@ endif
 let b:ftplugin = 1
 set re=1
 
-set softtabstop=4 shiftwidth=4 expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 let b:surround_{char2nr('=')} = "=>\r"
 let b:surround_{char2nr('-')} = "->\r"

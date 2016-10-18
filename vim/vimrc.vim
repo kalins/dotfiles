@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-vinegar'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
@@ -90,8 +91,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "
 
 set tags=./.tags
-let g:easytags_by_filetype = getcwd() . '/.tags/'
-let g:easytags_async = 0
+" let g:easytags_by_filetype = getcwd() . '/.tags/'
+let g:easytags_by_filetype = './.tags/'
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 1
 
 "
 " Syntastic
@@ -107,6 +110,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_js_checkers = ['jshint']
+let g:syntastic_php_phpcs_args = '--standard=PSR2'
 "let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 "let g:syntastic_auto_loc_list = 1
 

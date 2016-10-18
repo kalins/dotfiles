@@ -129,7 +129,7 @@ if [[ $OSTYPE = darwin* ]]; then
     source $(brew --prefix nvm)/nvm.sh
     source $(brew --prefix php-version)/php-version.sh && php-version 5
 else
-    export EDITOR=vim
+    export EDITOR=mvim
 fi
 
 export LC_ALL=en_US.UTF-8
