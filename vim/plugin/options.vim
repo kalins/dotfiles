@@ -11,6 +11,7 @@ set noswapfile
 set tabstop=4
 set linespace=4
 set listchars=eol:$,tab:>-
+set foldmethod=indent
 
 set splitbelow
 set splitright

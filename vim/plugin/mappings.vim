@@ -12,10 +12,12 @@ map <SPACE> :
 nmap J 5j
 nmap K 5k
 
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <S-L> :tabn<CR>
+nnoremap <S-H> :tabp<CR>
 
 map ty "ty
 map tp "tp

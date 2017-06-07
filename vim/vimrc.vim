@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -41,6 +42,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'honza/vim-snippets'
+Plugin 'heavenshell/vim-jsdoc'
+Plugin 'leafgarland/typescript-vim'
 "Plugin 'joonty/vdebug'
 
 call vundle#end()            " required
@@ -108,13 +111,13 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_js_checkers = ['jshint']
+let g:syntastic_check_on_wq = 1
+"let g:syntastic_aggregate_errors = 1
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args = '--standard=PSR2'
-"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-"let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+let g:syntastic_auto_loc_list = 0
 
 "
 " vim-airline
