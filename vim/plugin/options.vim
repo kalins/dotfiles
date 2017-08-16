@@ -8,7 +8,7 @@ set incsearch
 set showcmd
 set laststatus=2
 set noswapfile
-set tabstop=4
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set linespace=4
 set listchars=eol:$,tab:>-
 set foldmethod=indent

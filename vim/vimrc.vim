@@ -37,13 +37,16 @@ Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'SirVer/ultisnips'
 Plugin 'xolox/vim-easytags'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'honza/vim-snippets'
 Plugin 'heavenshell/vim-jsdoc'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'moll/vim-node'
+Plugin 'Galooshi/vim-import-js'
 "Plugin 'joonty/vdebug'
 
 call vundle#end()            " required
@@ -109,21 +112,32 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+"""let g:syntastic_always_populate_loc_list = 1
+"""let g:syntastic_check_on_open = 0
+"""let g:syntastic_check_on_wq = 0
 "let g:syntastic_aggregate_errors = 1
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-let g:syntastic_php_phpcs_args = '--standard=PSR2'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-let g:syntastic_auto_loc_list = 0
+"""let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"""let g:syntastic_php_phpcs_args = '--standard=PSR2'
+"""let g:syntastic_javascript_checkers = ['eslint']
+"""let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+"""let g:syntastic_auto_loc_list = 0
+
+"
+" ALE
+"
+
+let g:ale_lint_delay = 1000
 
 "
 " vim-airline
 "
 
 let g:airline_powerline_fonts = 1
+
+"
+" ag-vim
+"
+let g:ag_working_path_mode="r"
 
 
 "let g:vdebug_options["path_maps"] = {"/var/www": "/Users/kalinstefanov/Sites"}
