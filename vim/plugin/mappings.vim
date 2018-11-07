@@ -23,9 +23,9 @@ map ty "ty
 map tp "tp
 
 "nmap <C-]> <C-w>]<C-w>T
-nmap <D-p> :CtrlP<CR>
-nmap <D-r> :CtrlPBufTag<CR>
-nmap <D-e> :CtrlPMRUFiles<CR>
+"nmap <D-p> :CtrlP<CR>
+"nmap <C-r> :CtrlPBufTag<CR>
+nmap <C-e> :CtrlPMRUFiles<CR>
 
 "inoremap " ""<left>
 "inoremap ' ''<left>
@@ -34,8 +34,3 @@ nmap <D-e> :CtrlPMRUFiles<CR>
 "inoremap [ []<left>
 "inoremap { {}<Left>
 "inoremap {<CR> {<CR>}<Esc>O<TAB>
-
-function! BuildTags()
-  silent !clear
-  execute "!ctags -R --exclude=.git $GEM_HOME/gems/* ./*"
-endfunction

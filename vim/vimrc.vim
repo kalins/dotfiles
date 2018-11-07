@@ -1,6 +1,7 @@
 syntax on
 set nocompatible
 let mapleader = ","
+let maplocalleader = ","
 
 filetype off
 
@@ -16,7 +17,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
@@ -47,7 +47,10 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'moll/vim-node'
 Plugin 'Galooshi/vim-import-js'
+Plugin 'ternjs/tern_for_vim'
 "Plugin 'joonty/vdebug'
+Plugin 'mxw/vim-jsx'
+Plugin 'embear/vim-localvimrc'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -104,13 +107,30 @@ let g:easytags_by_filetype = './.tags/'
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 1
 
+"let g:easytags_languages = {
+"\  'javascript': {
+"\    'cmd': 'jsctags',
+"\      'args': [],
+"\  },
+"\  'javascript.jsx': {
+"\    'cmd': 'jsctags',
+"\      'args': [],
+"\  }
+"\}
+
+" 
+" Tern
+"
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
+
 "
 " Syntastic
 "
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 """let g:syntastic_always_populate_loc_list = 1
 """let g:syntastic_check_on_open = 0
@@ -127,12 +147,17 @@ set statusline+=%*
 "
 
 let g:ale_lint_delay = 1000
+let g:ale_sign_warning = '.'
 
 "
 " vim-airline
 "
 
 let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='sdark'
+let g:airline_extensions = []
+let g:airline_highlighting_cache = 1
 
 "
 " ag-vim

@@ -4,3 +4,5 @@ endif
 let b:ftplugin = 1
 
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+"nnoremap <C-]> :TernDef<CR>
