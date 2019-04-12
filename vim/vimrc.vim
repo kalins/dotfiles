@@ -51,6 +51,7 @@ Plugin 'ternjs/tern_for_vim'
 "Plugin 'joonty/vdebug'
 Plugin 'mxw/vim-jsx'
 Plugin 'embear/vim-localvimrc'
+Plugin 'elzr/vim-json'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -164,6 +165,10 @@ let g:airline_highlighting_cache = 1
 "
 let g:ag_working_path_mode="r"
 
+"
+" vim-json
+"
+let g:vim_json_syntax_conceal = 0
 
 "let g:vdebug_options["path_maps"] = {"/var/www": "/Users/kalinstefanov/Sites"}
 

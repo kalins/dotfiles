@@ -27,10 +27,6 @@ map tp "tp
 "nmap <C-r> :CtrlPBufTag<CR>
 nmap <C-e> :CtrlPMRUFiles<CR>
 
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap () ()
-"inoremap [ []<left>
-"inoremap { {}<Left>
-"inoremap {<CR> {<CR>}<Esc>O<TAB>
+" ALE
+nmap <silent> ek :ALENext<CR>
+nmap <silent> ej :ALEPrevious<CR>
