@@ -28,5 +28,5 @@ map tp "tp
 nmap <C-e> :CtrlPMRUFiles<CR>
 
 " ALE
-nmap <silent> ek :ALENext<CR>
-nmap <silent> ej :ALEPrevious<CR>
+nmap <silent> <leader>k :ALENext<CR>
+nmap <silent> <leader>j :ALEPrevious<CR>
