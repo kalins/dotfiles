@@ -8,7 +8,7 @@
 
 dir=$HOME/dotfiles                    # dotfiles directory
 olddir=$HOME/dotfiles_old             # old dotfiles backup directory
-files="bashrc inputrc vimrc vim gitconfig gitignore"    # list of files/folders to symlink in homedir
+files="bashrc zshrc inputrc vimrc vim gitconfig gitignore"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -33,4 +33,9 @@ for file in $files; do
 done
 
 # install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+fi
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
