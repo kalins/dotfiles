@@ -21,15 +21,14 @@ set splitright
 "set complete=.,w,b,u
 
 " Styles
-colorscheme solarized
-set background=dark
-let g:airline_solarized_bg='dark'
-"set macligatures
 
 if has('gui_running')
   hi LineNr guibg=bg
   hi vertsplit guifg=bg guibg=bg
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  colorscheme solarized
+  set background=dark
+  let g:airline_solarized_bg='dark'
 
   set transparency=10
   set guioptions-=l
@@ -41,6 +40,9 @@ if has('gui_running')
 else
   set t_Co=256
   let g:solarized_termcolors=256
+  colorscheme solarized
+  set background=dark
+  let g:airline_solarized_bg='dark'
   hi Normal ctermbg=NONE
 end
 

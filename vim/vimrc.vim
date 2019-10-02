@@ -107,6 +107,7 @@ set tags=./.tags
 let g:easytags_by_filetype = './.tags/'
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 1
+let g:easytags_suppress_ctags_warning = 1
 
 "let g:easytags_languages = {
 "\  'javascript': {
