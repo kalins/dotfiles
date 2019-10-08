@@ -10,10 +10,7 @@ desktop=$(echo $DESKTOP_SESSION)
 
 if type "xrandr" > /dev/null; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    if [ $m == 'DP-4' ]; then
-        MONITOR=$m polybar --reload top -c ~/.config/polybar/config &
-        MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config &
-    elif [ $m == 'HDMI-0' ]; then
+    if [ $m == 'HDMI-0' ]; then
         MONITOR=$m polybar --reload top -c ~/.config/polybar/config &
         MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config &
     else
