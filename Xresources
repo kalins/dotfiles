@@ -23,55 +23,115 @@ rofi.hide-scrollbar:    true
 ! URxvt
 ! -------------------------
 
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
 ! clean up urxvt, add keybinds
 URxvt.termName: rxvt-unicode-256color
 URxvt.intensityStyles: false
 URxvt.scrollBar: false
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
-!URxvt.font: xft:FontAwesome:style=Regular
-URxvt*font: xft:DejaVu Sans Mono:size=11
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-URxvt.transparent: true
-URxvt.shading: 10
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/dd00
 
 URxvt.perl-ext-common: default,matcher,fullscreen
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.keysym.F11: perl:fullscreen:switch
 
-*background:#2f343f
-*foreground: #d7d7d7
-*cursorColor: #c7c7c7
-*highlightTextColor: #383c4a
-*highlightColor: #c1ddff
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
+
+
+!*background:#2f343f
+!*foreground: #d7d7d7
+!*cursorColor: #c7c7c7
+!*highlightTextColor: #383c4a
+!*highlightColor: #c1ddff
 ! black
-*.color0:       #383c4a
-*.color8:       #383c4a
+!*.color0:       #383c4a
+!*.color8:       #383c4a
 ! red
-*.color1:       #e28d9d
-*.color9:       #e28d9d
+!*.color1:       #e28d9d
+!*.color9:       #e28d9d
 ! green
-*.color2:       #bfd888
-*.color10:      #bfd888
+!*.color2:       #bfd888
+!*.color10:      #bfd888
 ! yellow
-*.color3:       #df936c
-*.color11:      #df936c
+!*.color3:       #df936c
+!*.color11:      #df936c
 ! blue
-*.color4:       #5294e2
-*.color12:      #5294e2
+!*.color4:       #5294e2
+!*.color12:      #5294e2
 ! magenta
-*.color5:       #f74771
-*.color13:      #f74771
+!*.color5:       #f74771
+!*.color13:      #f74771
 ! cyan
-*.color6:       #7c818c
-*.color14:      #7c818c
+!*.color6:       #7c818c
+!*.color14:      #7c818c
 ! white
-*.color7:       #d7d7d7
-*.color15:      #d7d7d7
+!*.color7:       #d7d7d7
+!*.color15:      #d7d7d7
 
 ! emulate XTerm for proper recognition of key combinations in Vim
 !URxvt.keysym.Up              : \033[A  !breaks arrow keys in Vim
@@ -122,6 +182,8 @@ URxvt.keysym.C-S-Left         : \033[1;6D
 !URxvt.keysym.C-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
 URxvt.keysym.C-S-Home         : \033[1;6H
 URxvt.keysym.C-S-End          : \033[1;6F
+!URxvt.keysym.C-l              : \033[1;5006C
+!URxvt.keysym.C-l              : <C-S-Right>
 URxvt.keysym.C-l              : 
 URxvt.keysym.M-C-Up           : \033[1;7A
 URxvt.keysym.M-C-Down         : \033[1;7B

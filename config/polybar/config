@@ -59,7 +59,8 @@ tray-background = #2f343f
 
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
+card = intel_backlight
 format = <ramp>
 
 ramp-0 = 
@@ -74,7 +75,9 @@ time-format = "%H:%M"
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
-#label-discharging = %time%
+label-charging = %percentage%%
+label-discharging = %percentage%% %time%
+#label-full = %percentage%
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
@@ -119,7 +122,7 @@ ramp-load-4-foreground = #fba922
 ramp-load-5 = ▆
 ramp-load-5-foreground = #fba922
 ramp-load-6 = ▇
-ramp-load-6-foreground = #ff5555
+ramp-load-6-foreground = #fba922
 ramp-load-7 = █
 ramp-load-7-foreground = #ff5555
 
@@ -285,8 +288,8 @@ click-left = pactl set-source-mute 1 toggle
 
 [module/temperature]
 type = internal/temperature
-#thermal-zone = 9
-thermal-zone = 4
+thermal-zone = 9
+#thermal-zone = 4
 
 base-temperature = 40
 warn-temperature = 80

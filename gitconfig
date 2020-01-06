@@ -6,6 +6,7 @@
     st = status
     ci = commit
     co = checkout
+    cob = checkout -b
     llog = "log --graph --decorate --oneline --abbrev-commit --all"
     lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 [core]
