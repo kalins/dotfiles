@@ -26,6 +26,7 @@ rofi.hide-scrollbar:    true
 URxvt*scrollTtyOutput:      false
 URxvt*scrollWithBuffer:     true
 URxvt*scrollTtyKeypress:    true
+URxvt.saveLines: 20000
 ! clean up urxvt, add keybinds
 URxvt.termName: rxvt-unicode-256color
 URxvt.intensityStyles: false
@@ -33,14 +34,14 @@ URxvt.scrollBar: false
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11
-URxvt.resize-font.smaller: C-Down
-URxvt.resize-font.bigger: C-Up
+!URxvt.resize-font.smaller: C-Down
+!URxvt.resize-font.bigger: C-Up
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 URxvt*depth: 32
 URxvt*background: rgba:0000/0000/0200/dd00
 
-URxvt.perl-ext-common: default,matcher,fullscreen
+URxvt.perl-ext-common: default,matcher,fullscreen,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.keysym.F11: perl:fullscreen:switch

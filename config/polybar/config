@@ -22,6 +22,7 @@ font-4 = Font Awesome 5 Free Solid:size=10;2
 font-5 = Font Awesome 5 Brands:size=10;2
 
 modules-left = i3 #menu-apps
+modules-center = spotify
 modules-right =  backlight mic volume wireless-network battery layout date
 
 
@@ -342,3 +343,11 @@ type = internal/xkeyboard
 ; List of indicators to ignore
 blacklist-0 = num lock
 blacklist-1 = scroll lock
+
+[module/spotify]
+type = custom/script
+interval = 1
+;format-prefix = " "
+format = <label>
+exec = python $HOME/.config/polybar/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954

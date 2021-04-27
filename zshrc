@@ -85,6 +85,10 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Turn off all beeps
+unsetopt BEEP
+
+set bell-style none
 alias dokcer="docker"
 alias dokcer-compose="docker-compose"
 
@@ -94,3 +98,27 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export NVM_DIR="$HOME/.nvm"                            # You can change this if you want.
 export NVM_SOURCE="/usr/share/nvm"                     # The AUR package installs it to here.
 [ -s "$NVM_SOURCE/nvm.sh" ] && . "$NVM_SOURCE/nvm.sh"  # Load NVM
+
+alias tlf="tail -f"
+alias la='ls -hAlFiG'
+alias li='ls -hAlFiG'
+alias ll="ls -logh"
+alias rm="rm -i"
+alias mv="mv -i"
+alias grep="grep -i"
+alias op="open"
+alias cl="clear"
+alias cll="clear; ll"
+alias ..="cd .."
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias -- -='cd -'
+
+# Directories
+alias dsk="cd ~/Desktop/"
+alias doc="cd ~/Documents/"
+alias dw="cd ~/Downloads/"
+
+# Docker
+alias doc="docker"
+alias docc="docker-compose"

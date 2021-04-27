@@ -1,0 +1,5 @@
+[Unit]
+Description=Rsync backup
+
+[Service]
+ExecStart=%h/.bin/scripts/backup.sh

@@ -1,0 +1,28 @@
+alias tlf="tail -f"
+alias la='ls -hAlFiG'
+alias li='ls -hAlFiG'
+alias ll="ls -logh"
+alias rm="rm -i"
+alias mv="mv -i"
+alias grep="grep -i"
+alias op="open"
+alias cl="clear"
+alias cll="clear; ll"
+alias ..="cd .."
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias -- -='cd -'
+
+# Directories
+alias dsk="cd ~/Desktop/"
+alias doc="cd ~/Documents/"
+alias dw="cd ~/Downloads/"
+
+# Docker
+alias doc="docker"
+alias docc="docker-compose"
+
+# kill a rogue process running on a specific port
+# usage: `killp 3000`
+killp() { lsof -n "-i4TCP:${1:-3002}" | grep LISTEN | tr -s ' ' | cut -f 2 -d ' ' | xargs kill -9}
+

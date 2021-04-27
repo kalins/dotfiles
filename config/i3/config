@@ -275,7 +275,8 @@ default_floating_border none
 #
 
 #Auto start applications
-exec --no-startup-id compton --respect-prop-shadow -f
+#exec --no-startup-id compton --respect-prop-shadow -f --config ~/.config/compton.conf
+exec --no-startup-id picom --config ~/.config/picom.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/arch-linux-wallpaper-1920x1080.png
 

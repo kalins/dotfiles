@@ -1,14 +1,14 @@
-set nocompatible
-let mapleader = ","
-let maplocalleader = ","
+"
+" :so % to refresh .vimrc after making changes
+" :PlugInstall to install new stuff
+" :PlugUpdate to update to latest versions
+"
 
-"filetype off
+if &compatible
+  set nocompatible
+end
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin(stdpath('data') . '/plugged')
-
-" Plugins
+call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
@@ -43,23 +43,18 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'honza/vim-snippets'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'moll/vim-node'
 Plug 'Galooshi/vim-import-js'
 "Plug 'joonty/vdebug'
 "Plug 'embear/vim-localvimrc'
 Plug 'elzr/vim-json'
 Plug 'MarcWeber/vim-addon-local-vimrc'
-Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
-
-" Initialize plugin system
 call plug#end()
 
 filetype plugin indent on    " required
 
-"----------- PLUGINS -----------"
-"
-" CtrlP
+"""" PLUGIN RELATED TWEAKS
+""
 "
 
 let g:ctrlp_custom_ignore = {
@@ -73,7 +68,6 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 "
 
 let g:notes_directories = ['~/Documents/Notes']
-
 
 "
 " php-cs-fixer
@@ -146,3 +140,62 @@ let g:vim_json_syntax_conceal = 0
 " vim-localvimrc
 "
 let g:localvimrc_whitelist='~/Sites/'
+
+" [1]
+" Color scheme
+syntax enable
+" let g:solarized_termcolors=16
+let g:colarized_termtrans = 1
+let g:solarized_termcolors=256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+set background=dark
+let g:airline_solarized_bg='dark'
+hi Normal ctermbg=NONE
+" Allow powerline symbols to show up
+let g:airline_powerline_fonts = 1
+
+" [3]
+" Allow moving around between Tmux windows
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
+"
+"Open a tmux pane with Node
+nnoremap <leader>node :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'node'}<cr>
+
+" [4]
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+" " Allow highlighting of HTML within Javascript (for React)
+let g:javascript_enable_domhtmlcss = 1
+let g:jsx_ext_required = 0
+
+" tern
+if exists('g:plugs["tern_for_vim"]')
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 1
+  let g:tern_map_keys = 1
+
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+endif
+
+"set up path to editorconfig
+let g:EditorConfig_exec_path = findfile('.editorconfig', '.;')
+
+" Not sure what the below code does...look into Tern docs etc and figure it out?
+" Found this snippet on a forum post that says it gets everything working
+" https://github.com/Valloric/YouCompleteMe/issues/570
+" autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+" " Run commands that require an interactive shell
+" nnoremap <Leader>r :RunInInteractiveShell<space>
+"

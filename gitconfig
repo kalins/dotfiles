@@ -13,7 +13,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	filemode = false
-	editor = vim -f
+	editor = nvim -f
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -25,3 +25,5 @@
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[pull]
+	rebase = false
