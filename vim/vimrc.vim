@@ -36,8 +36,6 @@ Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'SirVer/ultisnips'
-Plugin 'xolox/vim-easytags'
-"Plugin 'scrooloose/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -175,3 +173,10 @@ let g:vim_json_syntax_conceal = 0
 
 "vim-mustache-handlebars
 "let g:mustache_abbreviations = 1
+"
+
+
+" netrw
+"
+
+let g:netrw_banner = 0
