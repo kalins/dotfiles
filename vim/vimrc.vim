@@ -48,7 +48,7 @@ Plugin 'Galooshi/vim-import-js'
 Plugin 'ternjs/tern_for_vim'
 "Plugin 'joonty/vdebug'
 Plugin 'mxw/vim-jsx'
-Plugin 'embear/vim-localvimrc'
+"Plugin 'embear/vim-localvimrc'
 Plugin 'elzr/vim-json'
 
 call vundle#end()            " required
@@ -102,10 +102,10 @@ let g:UltiSnipsSnippetsDir= $HOME .'/.vim/bundle/vim-snippets/UltiSnips'
 
 set tags=./.tags
 " let g:easytags_by_filetype = getcwd() . '/.tags/'
-let g:easytags_by_filetype = './.tags/'
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 1
-let g:easytags_suppress_ctags_warning = 1
+"let g:easytags_by_filetype = './.tags/'
+"let g:easytags_async = 1
+"let g:easytags_dynamic_files = 1
+"let g:easytags_suppress_ctags_warning = 1
 
 "let g:easytags_languages = {
 "\  'javascript': {

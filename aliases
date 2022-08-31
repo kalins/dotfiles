@@ -1,7 +1,7 @@
 alias tlf="tail -f"
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
-alias ll="ls -logh"
+alias ll="ls -loh"
 alias rm="rm -i"
 alias mv="mv -i"
 alias grep="grep -i"

@@ -10,9 +10,9 @@ desktop=$(echo $DESKTOP_SESSION)
 
 if type "xrandr" > /dev/null; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload top -c ~/.config/polybar/config &
-    MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config &
+    MONITOR=$m polybar --reload top -c ~/.config/polybar/config.ini &
+    MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config.ini &
   done
 else
-polybar --reload mainbar-i3 -c ~/.config/polybar/config &
+polybar --reload mainbar-i3 -c ~/.config/polybar/config.ini &
 fi

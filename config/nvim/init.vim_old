@@ -28,17 +28,16 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rking/ag.vim'
 Plug 'pangloss/vim-javascript'
-"Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'StanAngeloff/php.vim'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'ervandew/supertab'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'tobyS/vmustache'
 Plug 'tobyS/pdv'
-"Plug 'SirVer/ultisnips'
-"Plug 'w0rp/ale'
+Plug 'SirVer/ultisnips'
+Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mustache/vim-mustache-handlebars'
@@ -102,12 +101,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Easytags
 "
 
-"set tags=./.tags
+set tags=./.tags
 " let g:easytags_by_filetype = getcwd() . '/.tags/'
-"let g:easytags_by_filetype = './.tags/'
-"let g:easytags_async = 1
-"let g:easytags_dynamic_files = 1
-"let g:easytags_suppress_ctags_warning = 1
+let g:easytags_by_filetype = './.tags/'
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 1
+let g:easytags_suppress_ctags_warning = 1
 
 " 
 " Tern
@@ -129,7 +128,7 @@ let g:ale_sign_warning = '.'
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='sdark'
-"let g:airline_extensions = ['coc']
+let g:airline_extensions = []
 let g:airline_highlighting_cache = 1
 
 "
@@ -146,8 +145,3 @@ let g:vim_json_syntax_conceal = 0
 " vim-localvimrc
 "
 let g:localvimrc_whitelist='~/Sites/'
-
-"
-" vim-gutentags
-"
-"let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']

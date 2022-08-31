@@ -1,6 +1,7 @@
 [user]
 	name = kalin.stefanov
 	email = stefanov.kalin@gmail.com
+	signingkey = 47FB6E1473C1D8E8
 
 [alias]
     st = status

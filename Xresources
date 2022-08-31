@@ -33,7 +33,7 @@ URxvt.intensityStyles: false
 URxvt.scrollBar: false
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
-URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11,xft:Material Icons:pixelsize=11
 !URxvt.resize-font.smaller: C-Down
 !URxvt.resize-font.bigger: C-Up
 URxvt.iso14755: false
