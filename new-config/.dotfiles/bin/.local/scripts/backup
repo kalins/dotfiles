@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+echo 'BACKUP'
+# Basic snapshot-style rsync backup script 
+
+# Config
+OPT="-aAXv"
+EXCL="--exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/media/* --exclude=/home/* --exclude=/lost+found --exclude=/mnt/*"
+LINK="--link-dest=/home/kalin/Steam/Snapshots/last" 
+SRC="/"
+SNAP="/home/kalin/Steam/Snapshots/"
+LAST="/home/kalin/Steam/Snapshots/last"
+date=`date "+%Y-%b-%d:_%T"`
+
+# Run rsync to create snapshot
+rsync $OPT $EXCL $LINK $SRC ${SNAP}$date
+
+# Remove symlink to previous snapshot
+rm -f $LAST
+
+# Create new symlink to latest snapshot for the next backup to hardlink
+ln -s ${SNAP}$date $LAST

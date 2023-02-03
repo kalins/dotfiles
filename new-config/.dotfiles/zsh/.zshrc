@@ -68,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='nvim'
+#export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -84,6 +84,8 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+source ~/.zsh_profile
 
 # Turn off all beeps
 unsetopt BEEP
@@ -104,7 +106,6 @@ export ZK_NOTEBOOK_DIR="$HOME/Documents/Notes"
 
 alias tlf="tail -f"
 alias la='ls -hAlFiG'
-alias li='ls -hAlFiG'
 alias ll="ls -logh"
 alias rm="rm -i"
 alias mv="mv -i"
@@ -125,3 +126,4 @@ alias dw="cd ~/Downloads/"
 # Docker
 alias doc="docker"
 alias docc="docker-compose"
+
