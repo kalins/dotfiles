@@ -4,10 +4,10 @@ lualine.setup({
   options = {
     disabled_filetypes = {}
   },
-  winbar = {
+  sections = {
     lualine_c = {{'filename', path = 1}}
   },
-  inactive_winbar = {
+  inactive_sections = {
     lualine_c = {{'filename', path = 1}}
   }
 })
