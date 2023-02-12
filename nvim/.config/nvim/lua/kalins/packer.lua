@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
       'rose-pine/neovim',
       as = 'rose-pine',
       config = function()
-	  require("rose-pine").setup()
-	  vim.cmd('colorscheme rose-pine')
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
       end
   })
 
@@ -52,6 +52,21 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},             -- Required
       {'rafamadriz/friendly-snippets'}, -- Optional
     }
+  }
+
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
 end)

@@ -2,7 +2,7 @@
 # I am using zsh instead of bash.  I was having some troubles using bash with
 # arrays.  Didn't want to investigate, so I just did zsh
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="bin,sway,autostart,personal,nvim,tmux,zsh,chromium"
+    STOW_FOLDERS="bin,sway,autostart,personal,nvim,tmux,zsh,alacritty,chromium"
 fi
 
 if [[ -z $DOTFILES ]]; then
