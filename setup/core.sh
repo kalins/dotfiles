@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Core applications
-pacman -Sy --noconfirm base-devel git openssh curl cmake make gcc nodejs python-pip zsh neovim tmux fzf stow dex unzip
+pacman -Sy --noconfirm base-devel git openssh curl cmake make gcc nodejs python-pip zsh neovim tmux fzf stow dex unzip pacman-contrib
 
 # Install YAY
 sourcedir=~/sources

@@ -7,7 +7,7 @@
       // Choose the order of the modules
       "modules-left": ["sway/workspaces", "sway/mode"],
       "modules-center": ["custom/spotify"],
-      "modules-right": ["pulseaudio", "backlight", "network", "battery", "clock"],
+      "modules-right": ["pulseaudio", "backlight", "network", "battery","sway/language", "clock"],
       "sway/workspaces": {
           "disable-scroll": true,
           "all-outputs": false,
@@ -29,9 +29,12 @@
           "format": "{icon}",
           "format-icons": ["", ""]
       },
+      "sway/language": {
+          "format": "{short}",
+      },
       "clock": {
           "interval": 60,
-          "format": "{:%H:%M}",
+          "format": "{:%m-%d %H:%M}",
           "max-length": 25
       },
       "battery": {

@@ -2,10 +2,12 @@
 
 # Install sway
 
-pacman -Sy --noconfirm sway swaylock swaybg alacritty \
+pacman -Sy --noconfirm sway swaybg alacritty \
   kickoff waybar otf-font-awesome pulseaudio pulseadio-alsa pavucontrol \
-  nm-connection-editor
+  nm-connection-editor wl-clipboard 
 
+# Install swaylock-effects
+yay -S swaylock-effects
 
 # Install greetd and enable it
 yay -Sy greetd
@@ -17,3 +19,6 @@ systemctl start greetd.service
 
 # Replace $SHEL with sway in the command section
 # Change the user to you
+
+# Install slack
+yay -S slack-desktop-wayland

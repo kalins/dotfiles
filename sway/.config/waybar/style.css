@@ -1,20 +1,21 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Ubuntu Nerd Font";
+    font-family: "Source Code Pro Semibold";
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    color: #90e0ef;
+    border-bottom: 1px solid #118ab2;
 }
 
-#window {
+/*#window {
     font-weight: bold;
     font-family: "Ubuntu";
-}
+}*/
 /*
 #workspaces {
     padding: 0 5px;
@@ -24,7 +25,7 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: white;
+    color: #90e0ef;
     border-top: 2px solid transparent;
 }
 
@@ -44,7 +45,6 @@ window#waybar {
 }
 
 #clock {
-    font-weight: bold;
 }
 
 #battery {
